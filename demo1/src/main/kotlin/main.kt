@@ -12,7 +12,7 @@ fun main(args: Array<String>) = runBlocking {
     // 生成配置对象
     val config = Configuration().apply {
         serviceHost = "127.0.0.1"
-        servicePort = 11301
+        servicePort = 11300
     }
 
     // 创建client
