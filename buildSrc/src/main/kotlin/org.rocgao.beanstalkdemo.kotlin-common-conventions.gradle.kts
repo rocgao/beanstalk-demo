@@ -29,20 +29,16 @@ dependencies {
     // Align versions of all Kotlin components
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
 
+    // application dependencies
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3")
-
     implementation("com.dinstone:beanstalkc:2.3.0")
 
-    // Use JUnit Jupiter API for testing.
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.1")
-
-    // Use JUnit Jupiter Engine for testing.
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+    // test dependencies
+    testImplementation("org.jetbrains.kotlin:kotlin-test")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 }
 
 tasks.test {
     // Use junit platform for unit tests.
-    useJUnitPlatform()
-
-    include("**/*Test.class")
+    useJUnit()
 }
